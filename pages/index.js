@@ -1,4 +1,4 @@
-import Nav from '../components/Nav'
+import Nav from '../components/Nav.js'
 import Head from 'next/head'
 import HeaderPills from "../components/HeaderPills";
 
