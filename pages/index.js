@@ -5,7 +5,7 @@ import HeaderPills from "../components/HeaderPills";
 
 export default function IndexPage() {
   return (
-    <div>
+    <div className="bg-gray-300 h-screen">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta

@@ -25,11 +25,11 @@ export default function Nav() {
         <div className="p-2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-125"><FontAwesomeIcon style={{color:"#e2e8f0"}} size="2x" icon={faShoppingCart}/></div>
       </div>
       {navOpen ? 
-      <div className="flex flex-col bg-gray-300 transition ease-in-out">
-        <div className="hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Catagories</h2></div>
-        <div className="hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">User</h2></div>
-        <div className="hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Item</h2></div>
-        <div className="hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Item</h2></div>
+      <div className="flex flex-col bg-gray-300">
+        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Catagories</h2></div>
+        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">User</h2></div>
+        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Item</h2></div>
+        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer"><h2 className="text-gray-800 text-xl font-bold px-2">Item</h2></div>
       </div>: <div></div>}
       {searchDivOpen ? 
       <SearchDiv searchDivOpen={searchDivOpen} setSearchDivOpen={setSearchDivOpen}/>: <div></div>}
