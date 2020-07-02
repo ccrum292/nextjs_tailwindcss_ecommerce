@@ -1,5 +1,7 @@
-import Nav from '../components/nav'
+import Nav from '../components/Nav'
 import Head from 'next/head'
+import HeaderPills from "../components/HeaderPills";
+
 
 export default function IndexPage() {
   return (
@@ -13,6 +15,7 @@ export default function IndexPage() {
         <title>Caleb's Commerce</title>
       </Head>
       <Nav />
+      <HeaderPills/>
     </div>
   )
 }
