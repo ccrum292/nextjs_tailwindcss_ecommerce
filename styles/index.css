@@ -1,5 +1,10 @@
 @tailwind base;
 @tailwind components;
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.jost {
+  font-family: 'Jost', sans-serif;
+}
 
 .btn-blue {
   @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
