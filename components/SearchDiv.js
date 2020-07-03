@@ -43,8 +43,8 @@ function SearchDiv(props){
         {searchHistory ? searchHistory.map(data => {
           return<div key={data.id} className="px-16 mt-2">
                   <div className="cursor-pointer flex justify-between w-full border-4 border-gray-300 rounded-full py-2 px-4 transition duration-500 ease-in-out transform hover:bg-gray-800">
-                  <h4 className="overflow-x-hidden truncate text-white ">{data.text}</h4>
-                  <FontAwesomeIcon onClick={e => {e.preventDefault; deleteFromSearchHistory(data);}} className="ml-2 cursor-pointer self-center transition duration-300 ease-in-out transform hover:scale-125" style={{color:"#e2e8f0"}} size="1x" icon={faTimes}/>
+                    <h4 className="overflow-x-hidden truncate text-white ">{data.text}</h4>
+                    <FontAwesomeIcon onClick={e => {e.preventDefault; deleteFromSearchHistory(data);}} className="ml-2 cursor-pointer self-center transition duration-300 ease-in-out transform hover:scale-125" style={{color:"#e2e8f0"}} size="1x" icon={faTimes}/>
                   </div>
                 </div>
         }): <div></div>}

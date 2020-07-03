@@ -1,11 +1,11 @@
 import Nav from '../components/Nav.js'
 import Head from 'next/head'
-import HeaderPills from "../components/HeaderPills";
-
+import HeaderPills from "../components/HeaderPills"
+import ProductDivLg from "../components/ProductDivLg"
 
 export default function IndexPage() {
   return (
-    <div className="bg-gray-300 h-screen">
+    <div className="bg-gray-300">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
