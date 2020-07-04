@@ -29,8 +29,13 @@ export default function FiveStars(props){
   }
 
   return(
-    <div>
-      {generateStars(props)}
+    <div className="m-2 tooltip flex justify-center">
+      <div>
+        {generateStars(props)}
+      </div>
+      <div className="tooltip-text">
+        {props.tooltip ? props.tooltip: <div></div>}
+      </div>
     </div>
 
   )

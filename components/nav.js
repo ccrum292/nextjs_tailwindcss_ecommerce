@@ -31,18 +31,18 @@ export default function Nav() {
         </div>
       </div>
       {navOpen ? 
-      <div className="flex flex-col bg-gray-300">
-        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
-          <h2 className="text-gray-800 text-xl font-bold px-2">Catagories</h2>
+      <div className="flex flex-col bg-red-500">
+        <div className="border-b-2 border-gray-800 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
+          <h2 className=" text-xl font-bold px-2">Catagories</h2>
         </div>
-        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
-          <h2 className="text-gray-800 text-xl font-bold px-2">User</h2>
+        <div className="border-b-2 border-gray-800 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
+          <h2 className=" text-xl font-bold px-2">User</h2>
         </div>
-        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
-          <h2 className="text-gray-800 text-xl font-bold px-2">Item</h2>
+        <div className="border-b-2 border-gray-800 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
+          <h2 className=" text-xl font-bold px-2">Item</h2>
         </div>
-        <div className="transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
-          <h2 className="text-gray-800 text-xl font-bold px-2">Item</h2>
+        <div className="border-b-2 border-gray-800 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-500 cursor-pointer">
+          <h2 className=" text-xl font-bold px-2">Item</h2>
         </div>
       </div>: <div></div>}
       {searchDivOpen ? 

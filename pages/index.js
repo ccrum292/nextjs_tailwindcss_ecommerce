@@ -4,6 +4,7 @@ import HeaderPills from "../components/HeaderPills"
 import ProductDivLg from "../components/ProductDivLg"
 
 export default function IndexPage() {
+
   return (
     <div className="bg-gray-300">
       <Head>
@@ -16,6 +17,13 @@ export default function IndexPage() {
       </Head>
       <Nav />
       <HeaderPills/>
+      <div className="flex flex-wrap">
+        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+      </div>
     </div>
   )
 }

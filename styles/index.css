@@ -24,6 +24,14 @@
   display: none;
 }
 
+.tooltip .tooltip-text {
+  @apply invisible py-2 px-4 mb-12 absolute bottom-0 z-50 inline-block text-sm rounded-full bg-gray-700 text-white;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible;
+}
+
 @media screen and (min-width: 1024px){
   .x-scrollbar:hover{
     overflow-x: scroll;
