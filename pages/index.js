@@ -1,9 +1,16 @@
-import Nav from '../components/Nav.js'
+import Nav from '../components/Nav'
 import Head from 'next/head'
 import HeaderPills from "../components/HeaderPills"
-import ProductDivLg from "../components/ProductDivLg"
+import ProductDivLgVert from "../components/ProductDivLgVert"
+import ProductDivSmHorz from "../components/ProductDivSmHorz"
+import SideNavMenu from "../components/SideNavMenu"
+import ToTop from "../components/ToTop"
+
+import { useState } from 'react'
+import { motion } from "framer-motion"
 
 export default function IndexPage() {
+  const [navOpen, setNavOpen] = useState(false)
 
   return (
     <div className="bg-gray-300">
@@ -15,15 +22,86 @@ export default function IndexPage() {
         />
         <title>Caleb's Commerce</title>
       </Head>
-      <Nav />
-      <HeaderPills/>
-      <div className="flex flex-wrap">
-        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
-        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
-        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
-        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
-        <ProductDivLg title="Hello World" price={9.99} img={{src:"/1543982.jpg", alt:"hello world"}} rating={3.7} tooltip={3.7}/>
+      <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
+      <div className="lg:flex">
+        {navOpen ? null:
+        <div className="hidden lg:block">
+          <SideNavMenu/>
+        </div>}
+        <div className="">
+          <HeaderPills/>
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">New Products</h2>
+          <div className="flex flex-wrap justify-around">
+            <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello Worldddddddddddddd" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+          </div>
+
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">Popular Products</h2>
+          <div className="flex flex-wrap justify-around">
+            <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello Worldddddddddddddd" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+          </div>
+
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">Suggested For You</h2>
+          <div className="flex flex-wrap justify-around">
+            <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello Worldddddddddddddd" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <div className="flex flex-col justify-around">
+              <ProductDivSmHorz title="Hello Worlddddddddddddddddddddd" price={9999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99999.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+              <ProductDivSmHorz title="Hello World" price={99.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            </div>
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+            <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
+          </div>
+
+        </div>
       </div>
+      <ToTop/>
     </div>
   )
 }

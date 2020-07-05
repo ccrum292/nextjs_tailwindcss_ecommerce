@@ -1,21 +1,21 @@
 import PillButton from "./PillButton";
 
-export default function HeaderPills(){
+export default function SideMenuPills(){
 
   const infoForPills = [
     {
       id: 1,
-      pillname:"product",
+      pillname:"pduct",
       pillroute: "/category/entertainment"
     },
     {
       id: 2,
-      pillname:"product",
+      pillname:"produsdfct",
       pillroute: "/category/entertainment"
     },
     {
       id: 3,
-      pillname:"product",
+      pillname:"produdafsfsdfsfct",
       pillroute: "/category/entertainment"
     },
     {
@@ -25,7 +25,7 @@ export default function HeaderPills(){
     },
     {
       id: 5,
-      pillname:"product",
+      pillname:"prodasdsuct",
       pillroute: "/category/entertainment"
     },
     {
@@ -35,7 +35,7 @@ export default function HeaderPills(){
     },
     {
       id: 7,
-      pillname:"product",
+      pillname:"produsdct",
       pillroute: "/category/entertainment"
     },
     {
@@ -50,7 +50,7 @@ export default function HeaderPills(){
     },
     {
       id: 10,
-      pillname:"product",
+      pillname:"productfsdfasdfaf",
       pillroute: "/category/entertainment"
     },
     {
@@ -60,12 +60,12 @@ export default function HeaderPills(){
     },
     {
       id: 12,
-      pillname:"product",
+      pillname:"produ",
       pillroute: "/category/entertainment"
     },
     {
       id: 13,
-      pillname:"product",
+      pillname:"produasdfact",
       pillroute: "/category/entertainment"
     },
     {
@@ -87,7 +87,7 @@ export default function HeaderPills(){
 
 
   return(
-    <div className="lg:hidden jost x-scrollbar flex flex-row max-w-full flex-no-wrap overflow-scroll lg:overflow-x-hidden bg-opacity-0">
+    <div className="jost flex flex-wrap bg justify-around">
       {infoForPills.map(data => {
         return (
           <PillButton key={data.id} pillname={data.pillname} pillroute={data.pillroute}/>

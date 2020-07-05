@@ -11,29 +11,36 @@ export default function FiveStars(props){
     const returnArray = []
     for(let i=0; i<starsObject.numberOfFullStars; i++){
       returnArray.push(
-        <FontAwesomeIcon key={`${i}faStar`} style={{color:"#c53030"}} size="2x" icon={faStar}/>
+        <FontAwesomeIcon key={`${i}faStar`} style={{color:"#c53030"}} size={props.size} icon={faStar}/>
       )
     }
     for(let i=0; i<starsObject.numberOfHalfStars; i++){
       returnArray.push(
-        <FontAwesomeIcon key={`${i}faStarHalfAlt`} style={{color:"#c53030"}} size="2x" icon={faStarHalfAlt}/>
+        <FontAwesomeIcon key={`${i}faStarHalfAlt`} style={{color:"#c53030"}} size={props.size} icon={faStarHalfAlt}/>
       )
     }
     for(let i=0; i<starsObject.numberOfEmptyStars; i++){
       returnArray.push(
-        <FontAwesomeIcon key={`${i}faStarNoFill`} style={{color:"#c53030"}} size="2x" icon={faStarNoFill}/>
+        <FontAwesomeIcon key={`${i}faStarNoFill`} style={{color:"#c53030"}} size={props.size} icon={faStarNoFill}/>
       )
     }
 
     return returnArray
   }
 
+  let parentDivClassname = "m-2 tooltip flex justify-center"
+  let secondChildDivClassname = "tooltip-text"
+  if(props.orientHorz){
+    parentDivClassname = "m-2 tooltip-horz flex justify-center"
+    secondChildDivClassname = "tooltip-text-horz"
+  }
+
   return(
-    <div className="m-2 tooltip flex justify-center">
-      <div>
+    <div className={parentDivClassname}>
+      <div className="flex">
         {generateStars(props)}
       </div>
-      <div className="tooltip-text">
+      <div className={secondChildDivClassname}>
         {props.tooltip ? props.tooltip: <div></div>}
       </div>
     </div>
