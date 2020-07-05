@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import SearchForm from "./SearchForm"
-import { useState } from 'react'
+import { useContext } from 'react'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import SearchContext from "../context"
 
 function SearchDiv(props) {
-  const [search, setSearch] = useState("")
-  const [searchHistory, setSearchHistory] = useState([{ id: 0, text: "test1" }, { id: 1, text: "test2" }]);
+  const {search, setSearch, searchHistory, setSearchHistory} = useContext(SearchContext)
 
   const deleteFromSearchHistory = (data) => {
     // console.log("hello")
@@ -34,7 +34,7 @@ function SearchDiv(props) {
             <FontAwesomeIcon style={{ color: "#e2e8f0" }} size="2x" icon={faArrowLeft} />
           </div>
           <div className="p-2 self-center flex-grow flex">
-            <SearchForm searchHistory={searchHistory} setSearchHistory={setSearchHistory} search={search} setSearch={setSearch} searchDivOpen={props.searchDivOpen} />
+            <SearchForm searchDivOpen={props.searchDivOpen} />
           </div>
           <div onClick={onSubmitSetHistoryNotProp} className="cursor-pointer p-2 self-center transition duration-300 ease-in-out transform hover:scale-125">
             <FontAwesomeIcon style={{ color: "#e2e8f0" }} size="2x" icon={faSearch} />
