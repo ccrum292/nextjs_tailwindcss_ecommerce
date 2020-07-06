@@ -1,5 +1,6 @@
 import { useEffect, useRef, useContext } from "react"
 import SearchContext from "../context"
+import Router from "next/router"
 
 export default function SearchForm(props){
   const searchField = useRef(null)
@@ -16,6 +17,7 @@ export default function SearchForm(props){
       nextId = searchHistory[searchHistory.length -1].id + 1;
     }
     setSearchHistory([...searchHistory, {id:nextId, text: search}])
+    Router.push("/search")
   }
 
   return(
