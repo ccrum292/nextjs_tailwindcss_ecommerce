@@ -13,7 +13,7 @@ export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-900 pb-4">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
@@ -30,7 +30,7 @@ export default function IndexPage() {
         </div>}
         <div className="">
           <HeaderPills/>
-          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">New Products</h2>
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl text-gray-300">New Products</h2>
           <div className="flex flex-wrap justify-around">
             <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
             <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
@@ -53,7 +53,7 @@ export default function IndexPage() {
             <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
           </div>
 
-          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">Popular Products</h2>
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl text-gray-300">Popular Products</h2>
           <div className="flex flex-wrap justify-around">
             <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
             <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
@@ -76,7 +76,7 @@ export default function IndexPage() {
             <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
           </div>
 
-          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl">Suggested For You</h2>
+          <h2 className="jost font-bold border-b-2 border-gray-800 m-2 text-2xl text-gray-300">Suggested For You</h2>
           <div className="flex flex-wrap justify-around">
             <ProductDivLgVert title="Hello Worlddddddddddddddddddddddddddd" price={9999999999999.99} img={{ src: "/coolCat.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />
             <ProductDivLgVert title="Hello World" price={9.99} img={{ src: "/1543982.jpg", alt: "hello world" }} rating={3.7} tooltip={3.7} />

@@ -21,7 +21,7 @@ export default function SearchForm(props){
   }
 
   return(
-    <form onSubmit={onSubmitSetHistory} className="min-w-full flex-grow rounded-full">
+    <form onSubmit={onSubmitSetHistory} className="min-w-full flex-grow rounded-full shadowClass">
       <input value={search} onChange={e => setSearch(e.target.value)} className="jost outline-none min-w-full min-h-full border-4 border-gray-300 rounded-full py-2 px-4" ref={searchField} name="search" placeholder="Search" type="text"></input>
     </form>
   )

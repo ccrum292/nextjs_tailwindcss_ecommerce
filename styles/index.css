@@ -40,6 +40,14 @@
   @apply visible;
 }
 
+.shadowClass {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.534), 0 3px 10px 0 rgba(0, 0, 0, 0.534);
+}
+
+.hoverShadow:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.534), 0 3px 10px 0 rgba(0, 0, 0, 0.534);
+}
+
 
 @media screen and (min-width: 1024px){
   .x-scrollbar:hover{

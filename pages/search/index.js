@@ -31,7 +31,7 @@ export default function Search() {
   const displaySearchResults = (data) => {
     return data.map(val => {
       return(
-        <div className="sm:mx-auto">
+        <div key={val.id} className="sm:mx-auto">
           <ProductDivSmHorz
           key={val.id}
           title={val.title}
@@ -69,9 +69,9 @@ export default function Search() {
               setSearchHistory([...searchHistory, {id: searchHistory[searchHistory.length - 1].id + 1, text: data.text}]) 
               Router.push("/search")
             }} key={data.id} className="px-16 mt-2">
-              <div className="cursor-pointer flex justify-between w-full border-4 border-gray-300 rounded-full py-2 px-4 transition duration-500 ease-in-out transform hover:bg-gray-800">
+              <div className="cursor-pointer shadowClass flex justify-between w-full border-4 border-gray-300 rounded-full py-2 px-4 transition duration-500 ease-in-out transform hover:bg-gray-800">
                 <h4 className="overflow-x-hidden truncate text-white jost ">{data.text}</h4>
-                <FontAwesomeIcon onClick={e => { e.preventDefault(); deleteFromSearchHistory(data); }} className="ml-2 cursor-pointer self-center transition duration-300 ease-in-out transform hover:scale-150" style={{ color: "#e2e8f0" }} size="1x" icon={faTimes} />
+                <FontAwesomeIcon onClick={e => { e.stopPropagation(); deleteFromSearchHistory(data); }} className="ml-2 cursor-pointer self-center transition duration-300 ease-in-out transform hover:scale-150" style={{ color: "#e2e8f0" }} size="1x" icon={faTimes} />
               </div>
             </div>
           }) : <div></div>}

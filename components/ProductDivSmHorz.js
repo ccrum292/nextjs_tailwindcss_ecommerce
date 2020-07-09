@@ -3,7 +3,7 @@ import FiveStars from "../components/FiveStars"
 export default function ProductDivSmHorz(props) {
 
   return (
-    <div className="cursor-pointer flex flex-row  justify-start bg-gray-800 rounded-lg overflow-hidden m-2 sm:w-80 transition duration-700 ease-in-out transform hover:scale-105">
+    <div className="cursor-pointer shadowClass flex flex-row  justify-start bg-gray-800 rounded-lg overflow-hidden m-2 sm:w-80 transition duration-700 ease-in-out transform hover:scale-105">
       <img className="self-center object-cover h-20 w-25" src={props.img.src} alt={props.img.alt} />
       <div className="flex flex-col justify-center w-2/3">
         <h3 className="jost text-gray-300 ml-2 text-xl font-bold overflow-x-hidden truncate">{props.title}</h3>
